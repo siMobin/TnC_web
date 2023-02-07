@@ -28,12 +28,26 @@
     width: 100%;
     height: 90vh;
     object-fit: cover;
+    margin-top: 40px;
   }
+
 .swiper-button-prev,.swiper-button-next{
     background-color: rgba(127, 255, 212, 0.300);
-    border-radius: 3px;
+    border-radius: 50%;
     padding: 5px;
+    width: 30px;
+    height: 30px;
+    box-shadow: -2px 2px 5px -3px rgba(0,0,0,0.75);
 }
+
+.swiper-button-prev:after,.swiper-button-next:after{
+  font-size: 20px;
+  font-weight: 900;
+}
+
+/* .swiper-pagination{
+  box-shadow: -2px 2px 5px -3px rgba(0,0,0,0.75);
+} */
 
 .cards{
   display: flex;
@@ -42,7 +56,7 @@
 
 .cards div{
   width: 180px;
-  height: 200px;
+  /* height: 200px; */
   padding: 1em 3em;
   margin: .5em;
   display: flex;
@@ -69,14 +83,6 @@
   margin: 2em 0;
 }
 
-@media screen and (max-width:768px){
-  .cards div{
-    padding: 1em;
-  }
-  .cards img{
-    width: 80px;
-  }
-}
 /*...............photo..................................*/
 
 h4{
@@ -134,6 +140,7 @@ h4{
 
 .why div{
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 
@@ -152,16 +159,110 @@ h4{
 }
 
 .extra img{
-  width: 200px;
+  height: 200px;
   margin: 5px;
-  object-fit: cover;
+  /* object-fit: cover; */
+  transition: all 1s;
+}
+
+.extra img:hover{
+   scale: 1.05;
+}
+
+.extra:has(img:hover) img:not(:hover){
+  opacity: 0.6;
+  scale: 0.95;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.show-more .more {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.show-more .toggle-btn:before {
+  content: "Show Less";
+}
+
+.show-less .more {
+  display: none;
+}
+
+.show-less .toggle-btn:before {
+  content: "Show More";
+}
+
+.toggle-btn{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--red);
+  color: white;
+  border: none;
+  max-width: 150px;
+  position: relative;
+  left: 45%;
+  right: 50%;
+  margin: 1em;
+  padding: 10px 1em;
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.7);
+}
+
+.toggle-btn:active{
+  opacity: .5;
+}
+
+.toggle-btn img{
+  padding: .5em;
+  height: 1em;
+}
+
+.show-more .toggle-btn img{
+  transform: rotate(180deg);
+}
+
+.show-less .toggle-btn img{
+  transform: rotate(0deg);
+}
+
+
+@media screen and (max-width:950px) {
+  .swiper-slide img {
+    height: 40vh;
+  }
+
+  .title{
+    font-size: 25px;
+    margin: 1em 0;
+  }
 }
 
 @media screen and (max-width:768px){
+.cards div{
+  padding: .5em;
+  font-size: 14px;
+}
 
-  
+.cards img{
+  width: 60px;
+}
+
+h4{
+  font-size: 20px;
+  margin-bottom: .5em;
+}
+
 .slide,.twentytwenty-container{
-  width: 500px;
+  width: 90vw;
   border-radius: 5px;
 }
 
@@ -170,7 +271,7 @@ h4{
   }
 
   .extra img{
-    width: 150px;
+    height: 120px;
   }
   
 }

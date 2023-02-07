@@ -114,3 +114,20 @@
     background: var(--blue);
     border-radius: 5px 5px 0px 0px; 
 }
+
+
+@media screen and (max-width: 768px){/*......................................responsive....................*/
+    #order .card{
+        width: 75vw;
+    }
+    
+    #order img{
+        width: 55vw;
+    }
+
+    
+#order h1{
+    font-size: 25px;
+    margin-left: 0;
+}
+}

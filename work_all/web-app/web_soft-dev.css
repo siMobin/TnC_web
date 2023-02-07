@@ -30,11 +30,13 @@ header{
   height: 90vh;
   object-fit: cover;
   z-index: -10;
+  overflow: hidden;
 }
 
 .list{
     background-color: #51c9e1;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     padding:  5px .5em;
     /* position: absolute; */
@@ -82,14 +84,33 @@ header{
     padding: 0 2em;
 }
 
+@media screen and (max-width:950px) {
+    header{
+        font-size: 30px;
+        height: 50vh;
+        font-weight: 500;
+    }
+
+    .bg_video{
+        top: 40px;
+      width: 100vw;
+      /* height: 90vh; */
+      height: 50vh;
+    }
+}
 
 @media screen and (max-width:768px) {
     .list h1,._{
-        font-size: 130%;
+        font-size: 20px;
     }
     .list img{
         max-width: 60px;
     }   
+
+    ._ img{
+        width: 20px;
+        mix-blend-mode: difference;
+    }
 }
 
 /* ....................produc*.......................... */
@@ -105,8 +126,8 @@ header{
     flex-direction: column;
     margin: 2em;
     width: 45vw;
-
 }
+
 .product h3{
     font-size: 40px;
     font-weight: 500;
@@ -148,10 +169,16 @@ header{
     background-repeat: no-repeat;
     background-position: right center;
     background-size: 600px,auto;
-    border-bottom: 1px solid red;
+    /* border-bottom: 1px solid red; */
+    /* box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.5); */
 }
 
 @media screen and (max-width:950px) {
+    .product{
+        margin: .5em;
+        width: 100vw;
+    }
+
     .web{
         background-size: 500px,auto;
     } 
@@ -159,16 +186,6 @@ header{
     .product{
         width: 100%;
     }
-}
-
-@media screen and (max-width:768px) {
-    .web{
-        background-position: top right;
-        background-size: 400px,auto;
-    }
-    .dark-mode .web p{
-        color: black;
-    }  
 }
 
 .web h1{
@@ -189,19 +206,19 @@ header{
 }
 
 .application{
-    background-image: url(./image/EDF-mockup.png),linear-gradient(45deg,rgba(0, 149, 255, 0.1),#51c9e1);
+    background-image: url(./image/web_application.webp),linear-gradient(45deg,rgba(0, 149, 255, 0.1),#51c9e1);
 }
 
 .marketplace{
-    background-image: url(./image/InvisibleHomes1@3x.png),linear-gradient(45deg,rgba(0, 149, 255, 0.1),#51c9e1);
+    background-image: url(./image/marketplace.webp),linear-gradient(45deg,rgba(0, 149, 255, 0.1),#51c9e1);
 }
 
 .mobile{
-    background-image: url(./image/Mucho-app1@3x.png),linear-gradient(45deg,rgba(0, 149, 255, 0.1),#51c9e1);
+    background-image: url(./image/mobile_app.webp),linear-gradient(45deg,rgba(0, 149, 255, 0.1),#51c9e1);
 }
 
 .e-com{
-    background-image: url(./image/tep1@3x.png),linear-gradient(45deg,rgba(0, 149, 255, 0.1),#51c9e1);
+    background-image: url(./image/e_commerce.webp),linear-gradient(45deg,rgba(0, 149, 255, 0.1),#51c9e1);
 }
 
 .more_project{
@@ -246,36 +263,10 @@ header{
     text-transform: uppercase;
 }
 
-@media screen and (max-width:768px) {
-    .stack h1{
-        font-size: 25px;
-    }
-    .stack_item h1{
-        font-size: 20px;
-        min-width: 100px;
-    }
-    .stack_item img{
-        width: 40px;
-        height: 40px;
-    }   
-}
-
 /* ........................................wordpress........................................ */
 .wordpress{
     display: flex;
     background-color: #51c9e1;
-}
-
-@media screen and (max-width:768px) {
-    .wordpress{
-        flex-wrap: wrap-reverse;
-        justify-content: center;
-    }   
-}
-
-.wordpress img{
-    width: 45vw;
-    height: 100%;
 }
 
 .wordpress span{
@@ -290,4 +281,82 @@ header{
 
 .wordpress div{
     padding: 2em;
+}
+
+@media screen and (max-width:950px) {
+    .product{
+        margin: .5em;
+        width: 100vw;
+    }
+
+    .web{
+        background-size: 500px,auto;
+    } 
+    
+    .product{
+        width: 100%;
+    }
+    
+    .wordpress{
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }   
+    
+    .wordpress img{
+        width: 80vw;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .web{
+        /* background-position: top right; */
+        background-position-y: auto -20vh;
+        background-position-x: auto 200px;
+        background-size: 60vw, auto;
+    }
+    .dark-mode .web p{
+        color: black;
+    } 
+
+    .product h3{
+        font-size: 30px;
+        font-weight: 500;
+    }
+    .product p{
+        font-size: 16px;
+    }
+    
+    .product img{
+        width: 20px;
+        padding-right: .5em;
+    }
+    
+    .product div{
+        margin: .5em 0;
+    } 
+    
+    .product h1{
+        display: flex;
+        font-size: 20px;
+        font-weight: 400;
+    }
+    /* .......................................................... */
+    .stack_item{
+        margin: .5em .5em;
+    }
+    .stack h1{
+        font-size: 25px;
+        margin: 1em 0;
+        text-align: center;
+    }
+    .stack_item h1{
+        font-size: 20px;
+        min-width: 100px;
+    }
+    .stack_item img{
+        width: 30px;
+        height: 30px;
+        padding: 0;
+    }
 }

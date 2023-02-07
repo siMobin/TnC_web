@@ -96,6 +96,7 @@ button:hover, a:hover{
 
 .dropdown-container a{
     margin: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.20);
 }
 
 /*..............nav dropdown control.............................*/
@@ -323,13 +324,19 @@ li{
     border-radius: 10px;
     z-index: 13;  
     width: 500px;
-    max-width: 80%;
+    max-width: 80vw;
     background: rgba(127, 127, 127, 0.500);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.500);
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
     border: 1px solid rgba(255, 255, 255, 0.50);
+}
+
+@media screen and (max-width:768px) {
+    .modal{
+        width: 70vw;
+    }
 }
 
 
@@ -420,6 +427,31 @@ li{
     margin: 5px 10px ;
 }
 
+/* ...................slider animation................. */
+/* 
+.twentytwenty-left-arrow{
+    animation-name: sl_left;
+}
+.twentytwenty-right-arrow{
+    animation-name: sl_right;
+}
+.twentytwenty-left-arrow,.twentytwenty-right-arrow{
+    animation-timing-function: ease-out;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes sl_right {
+    0%{right: 40%;}
+    50%{right: 60%;}
+    100%{right: 40%;}
+}
+
+@keyframes sl_left {
+    0%{left: 40%;}
+    50%{left: 60%;}
+    100%{left: 40%;}
+} */
 
 /*...........................................common.............................................*/
 
@@ -434,7 +466,7 @@ p{
 }
 
 h1{
-    margin: 1vh;
+    /* margin: 1vh; */
     font-weight: 700;
     font-size: 5vw;
 }
@@ -453,6 +485,7 @@ h1{
     padding: 1em;
     margin-bottom: .5em;
     justify-content: space-around;
+    gap: 3em;
 }
 
 .dark-mode #bottom{
@@ -471,22 +504,24 @@ h1{
 }
 
 #bottom h2{
-    font-weight: 700;
-    font-size: 30px;
+    font-weight: 500;
+    font-size: 24px;
     margin: 0 0 10px 0;
 }
 
 #bottom img{
-    width: 20px;   
+    width: 16px;   
 }
 
 #bottom span{
     padding-left: 5px;
-    font-weight: 500;
-    font-size: 15px;
+    font-weight: 400;
+    font-size: 14px;
+    cursor: pointer;
 }
 
 #bottom a:hover{
+    cursor: pointer;
     text-decoration: underline;
 }
 
@@ -535,3 +570,8 @@ a button{
 .dark-mode a button{
     background-color: #060637;
 }
+
+/* ......image overlay............ */
+/* .twentytwenty-overlay:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+} */

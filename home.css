@@ -25,6 +25,7 @@ h1{
 
 .dark-mode .dark{
     background-color: white;
+    transition: all .5s;
 }
 
 /*.....................................................................about..................................................................*/
@@ -114,6 +115,7 @@ h3{
 
 .details{
     display: flex;
+    justify-content: center;
 }
 
 .details:nth-child(odd){
@@ -146,15 +148,26 @@ h3{
 
     .about p{
         margin: .5vh 4vh;
-    }    
+    }
+
+    .details:nth-child(odd){
+        flex-wrap: wrap-reverse;
+        padding: 0;
+    }
+
+    .details:nth-child(even){
+        flex-wrap: wrap;
+        padding: 0;
+    }
 
     .item img{
-        width: 200px;
-        height: 200px;
+        width: 80vw;
+        height: 80vw;
     }
 
     .item p{
-        font-size: 14px;
+        width: 95vw;
+        font-size: 16px;
     }  
 }
 
@@ -203,14 +216,34 @@ h3{
 }
 
 @media screen and (max-width: 768px) {
+    .section #title_1,.section #title_2{
+        justify-items: center;
+    }
+
     .section .title img{
         width: 95vw;
         right: 50%;
         left: 50%;
     }
 
+    .section_demo img{
+        width: 90vw !important;
+        height: 220px !important;
+    }
+    
+    .section_demo div{
+        width: 90vw !important;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
     .section .title{
         grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: flex-start;
     }
     .section .title:nth-of-type(2) {
         order: 1;
@@ -230,6 +263,8 @@ h3{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    align-items: center;
+    gap: 2em;
 }
 
 .section_demo img{
@@ -241,6 +276,7 @@ h3{
     transition: all 1.5s;
     object-fit: cover;
 }
+
 .section_demo iframe{
     border-radius: 10px;
     
@@ -253,7 +289,7 @@ h3{
 .section_demo div{
     width: 400px;
     height: 300px;
-    margin: 1em;
+    /* margin: 1em; */
     overflow: hidden;
 }
 
@@ -285,7 +321,7 @@ h5{/*......tag.........................................*/
 /*.....#.....gfx..................................................*/
 .list{
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     font-size: 28px;
     font-weight: 500;
 }
@@ -302,10 +338,10 @@ h5{/*......tag.........................................*/
 #gfx img{
     max-width: 700px;
 }
-
+/* 
 #gfx li{
     margin-left: 2em;
-}
+} */
 
 .gfx_text{
     width: 800px;
@@ -331,6 +367,16 @@ h5{/*......tag.........................................*/
 .slide{
     padding: .5em 0;
     margin: 1em;
+}
+
+@media screen and (max-width:768px) {
+    .slide,.twentytwenty-container{
+        width: 90vw;
+    }
+
+    h5{
+        width: 90vw;
+    }
 }
 
 
@@ -482,7 +528,7 @@ h5{/*......tag.........................................*/
     height: 150%;
 }
   .card__one .card__bg {
-    background: url("./image/animation_sample_background.png") center/cover no-repeat;
+    background: url("./image/animation_sample_background.webp") center/cover no-repeat;
     /*    https://s3-us-west-2.amazonaws.com/s.cdpn.io/62105/3dr_monobg.jpg   */
   }
   .card__two .card__img {

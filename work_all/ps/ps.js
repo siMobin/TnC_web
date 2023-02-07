@@ -1,14 +1,41 @@
+// swiper .....................
+
+// var swiper = new Swiper(".mySwiper", {
+//     navigation: {
+//       nextEl: ".swiper-button-next",
+//       prevEl: ".swiper-button-prev",
+//     },
+//   });
+
+// swiper loop.....................
 
 var swiper = new Swiper(".mySwiper", {
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
+  slidesPerView: 1,
+  spaceBetween: 0,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    dynamicBullets: true,
+    clickable: false,//for autoplay, line 30
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+//stop transition
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: false
+  },//
+  autoplay: {
+    delay: 2000,
+  },
+});
 
+// ..................see more........................
 
-$(window).load(function(){
-    $(".twentytwenty-container[data-orientation!='vertical']").twentytwenty({default_offset_pct: 0.45});
-    $(".twentytwenty-container[data-orientation='vertical']").twentytwenty({default_offset_pct: 0.3, orientation: 'vertical'});
-  });
-  
+function toggle() {
+  var content = document.querySelector('.content');
+  content.classList.toggle('show-more');
+  content.classList.toggle('show-less');
+}

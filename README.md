@@ -9,6 +9,41 @@ Phone: +8801728093045
 WhatsApp: +8801616028403  
 Email: teamandcore@gmail.com  
 
+
+
+## Acknowledgments
+
+### *[siMobin](https://github.com/siMobin)*
+for providing [specific resource or inspiration]
+- Project management and coordination, including organizing and scheduling team meetings, managing timelines and deliverables, and ensuring that the project was completed on time and within budget.
+- Resource allocation and management, such as overseeing the distribution of tasks and ensuring that team members had the necessary tools and resources to complete their work.
+- Communication and collaboration, such as facilitating communication and coordination between team members and with external stakeholders, such as clients or collaborators.
+
+### *[Shanto]*
+lorem 0 [specific resource or inspiration]
+### *[Rahul](https://github.com/sptm7731) & [Muid]*
+for providing [specific resource or inspiration]
+
+---------
+
+## Built With
+
+* [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) - The markup language used for creating the structure of the web page
+* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) - The styling language used for making the web page visually appealing
+* [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - The programming language used for adding interactivity to the web page
+* [Open-Source Libraries](https://en.wikipedia.org/wiki/Open-source_library) - Additional tools used to enhance the functionality of the project
+
+
+## Dependencies
+###### [Open Source License](https://opensource.org/licenses)
+
+  * [jquery](http://jquery.com/)
+  * [jquery.event.move](https://github.com/stephband/jquery.event.move)
+  * [twentytwenty.js](https://github.com/zurb/twentytwenty)
+  * [swiper](https://swiperjs.com/)
+  * [aos](https://michalsnik.github.io/aos/)
+
+
 ## License
 [Closed Source License](LICENSE)
 <hr>
