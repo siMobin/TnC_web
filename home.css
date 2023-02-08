@@ -23,6 +23,8 @@ h1{
     cursor: pointer;
 }
 
+
+
 .dark-mode .dark{
     background-color: white;
     transition: all .5s;
