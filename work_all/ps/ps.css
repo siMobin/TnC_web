@@ -271,7 +271,7 @@ h4{
   }
 
   .extra img{
-    height: 120px;
-  }
-  
+    height: fit-content;
+    width: 150px;
+  } 
 }
